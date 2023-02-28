@@ -147,6 +147,7 @@
             this.btnAddAuto.TabIndex = 12;
             this.btnAddAuto.Text = "Add Vehicle";
             this.btnAddAuto.UseVisualStyleBackColor = true;
+            this.btnAddAuto.Click += new System.EventHandler(this.btnAddAuto_Click);
             // 
             // lbxVehicles
             // 

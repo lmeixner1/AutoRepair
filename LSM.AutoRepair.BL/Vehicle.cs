@@ -8,12 +8,23 @@ namespace LSM.AutoRepair.BL
 {
     public class Vehicle //internal class Vehicle (internal) means public to the product
     {
+        //fields
+        private int year;
+
         public string Make { get; set; } = "";
 
         public string Model { get; set; } = "";
 
-        public int Year { get; set; } = 0;
-
+        public int Year
+        {
+            get { return year; }
+            set 
+            {
+                if (value > 1900) year = value;
+                else throw new InvalidYearException(value); // This throws a new exception which is an object
+                
+                year = value; }
+        }
 
 
         public Vehicle() { }

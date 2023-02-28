@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSM.AutoRepair.UI", "LSM.AutoRepair.UI\LSM.AutoRepair.UI.csproj", "{5D47C2A9-A716-4440-A2FF-615400130DA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSM.AutoRepair.BL", "LSM.AutoRepair.BL\LSM.AutoRepair.BL.csproj", "{4B59B8B6-733F-4D7C-942C-8BEB2172076E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSM.AutoRepair.BL", "LSM.AutoRepair.BL\LSM.AutoRepair.BL.csproj", "{4B59B8B6-733F-4D7C-942C-8BEB2172076E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSM.AutoRepair.BL.Test", "LSM.AutoRepair.BL.Test\LSM.AutoRepair.BL.Test.csproj", "{6B0C4AF4-4EE9-441F-B09F-2E62009C2FAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4B59B8B6-733F-4D7C-942C-8BEB2172076E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B59B8B6-733F-4D7C-942C-8BEB2172076E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B59B8B6-733F-4D7C-942C-8BEB2172076E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B0C4AF4-4EE9-441F-B09F-2E62009C2FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0C4AF4-4EE9-441F-B09F-2E62009C2FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0C4AF4-4EE9-441F-B09F-2E62009C2FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0C4AF4-4EE9-441F-B09F-2E62009C2FAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

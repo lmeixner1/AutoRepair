@@ -59,4 +59,27 @@ public partial class Form1 : Form
         lbxVehicles.DataSource = null; // unbind
         lbxVehicles.DataSource = vehicles; // rebind
     }
+
+    private void btnAddAuto_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            Vehicle vehicle = new Vehicle();
+            vehicle.Make = txtMake.Text;
+            vehicle.Model = txtModel.Text;
+            vehicle.Year = int.Parse(txtYear.Text);
+        }
+        catch (InvalidYearException iye) 
+        {
+            MessageBox.Show(iye.Message);
+        }
+        catch (FormatException fe)
+        {
+            MessageBox.Show(fe.Message);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Something really bad happened");
+        }
+    }
 }
