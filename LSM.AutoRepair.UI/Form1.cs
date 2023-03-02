@@ -16,12 +16,18 @@ public partial class Form1 : Form
     //fields
     public CustomerCollection customers = new CustomerCollection();
 
+    private DateTime startTime = DateTime.MinValue;
+
     public Form1()
     {
         InitializeComponent();
 
         customers.LoadTestCustomers();
         RebindCustomers();
+
+        tmrTime_Tick(this, EventArgs.Empty);
+
+        startTime = DateTime.Now;
     }
 
     public void btnAddCalc_Click(object sender, EventArgs e)
@@ -81,5 +87,12 @@ public partial class Form1 : Form
         {
             MessageBox.Show("Something really bad happened");
         }
+    }
+
+    private void tmrTime_Tick(object sender, EventArgs e)
+    {
+        TimeSpan sinceStart = DateTime.Now - startTime;
+        staTime.Text = sinceStart.ToString("hh\\:mm\\:ss");
+        staTime.Text = DateTime.Now.ToString("hh\\:mm\\:ss");
     }
 }

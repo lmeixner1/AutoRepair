@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
@@ -48,6 +49,10 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAutoDel = new System.Windows.Forms.Button();
             this.btnAutoUp = new System.Windows.Forms.Button();
+            this.staMain = new System.Windows.Forms.StatusStrip();
+            this.staTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.staMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -221,11 +226,33 @@
             this.btnAutoUp.Text = "Update Auto";
             this.btnAutoUp.UseVisualStyleBackColor = true;
             // 
+            // staMain
+            // 
+            this.staMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.staTime});
+            this.staMain.Location = new System.Drawing.Point(0, 311);
+            this.staMain.Name = "staMain";
+            this.staMain.Size = new System.Drawing.Size(994, 22);
+            this.staMain.TabIndex = 20;
+            this.staMain.Text = "statusStrip1";
+            // 
+            // staTime
+            // 
+            this.staTime.Name = "staTime";
+            this.staTime.Size = new System.Drawing.Size(118, 17);
+            this.staTime.Text = "toolStripStatusLabel1";
+            // 
+            // tmrTime
+            // 
+            this.tmrTime.Interval = 1000;
+            this.tmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 333);
+            this.Controls.Add(this.staMain);
             this.Controls.Add(this.btnAutoUp);
             this.Controls.Add(this.btnAutoDel);
             this.Controls.Add(this.btnUpdate);
@@ -248,6 +275,8 @@
             this.Controls.Add(this.lblFirstName);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.staMain.ResumeLayout(false);
+            this.staMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,5 +304,8 @@
         private Button btnUpdate;
         private Button btnAutoDel;
         private Button btnAutoUp;
+        private StatusStrip staMain;
+        private ToolStripStatusLabel staTime;
+        private System.Windows.Forms.Timer tmrTime;
     }
 }
